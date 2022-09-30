@@ -122,7 +122,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
 // 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
-  console.log(data);
+  
   
 
 // 4. Use the same style as the earthquake data.
@@ -146,9 +146,9 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     if (magnitude > 5.5) {
       return "#ea822c";
     }
-    if (magnitude > 4.5) {
      return "#ee9c00";
-    }
+  
+  }
   
 
 // 6. Use the function that determines the radius of the earthquake marker based on its magnitude.
@@ -177,7 +177,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
 // 8. Add the major earthquakes layer to the map.
     majorEarthquakes.addTo(map);
 // 9. Close the braces and parentheses for the major earthquake data.
-  };
 });
 // Here we create a legend control object.
   let legend = L.control({
@@ -231,7 +230,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
 	  }).addTo(map);
 
 	  // add tectonic plates layer to map
-	  tectonicplates.addTo(map);
+	  tectonicPlates.addTo(map);
 
   });
 });
